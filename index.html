@@ -12,43 +12,6 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <button onclick="redirectWhatsapp()" id="whatsapp-button" class="whatsapp-button">
-      <img src="./assets/Whatsapp_icon.svg" alt="" />
-      <p>Agendar</p>
-    </button>
-
-    <button id="menu-button" onclick="openMenu()" class="menu-button">
-      <img src="./assets/menu.svg" alt="" />
-    </button>
-    <div id="menu" class="menu-container">
-      <img class="close-button" onclick="closeMenu()" src="./assets/close-menu.svg" alt="" />
-      <a onclick="redirectWhatsapp()">Agenda sua consulta</a>
-      <hr />
-      <a href="#sobre-mim" onclick="closeMenu()">Sobre mim</a>
-      <hr />
-      <a href="#contato" onclick="closeMenu()">Contato</a>
-      <hr />
-      <div class="menu-buttons-container">
-        <a href="https://www.instagram.com/randolf.machado/" target="_blank"><img src="./assets/Instagram.svg" alt="" /></a>
-
-        <a href="https://www.facebook.com/randolfmachadohipnose/" target="_blank">
-          <img src="./assets/Whatsapp_icon_minimalista-2.svg" alt="" />
-        </a>
-
-        <a href="https://www.facebook.com/randolfmachadohipnose/" target="_blank">
-          <img src="./assets/Facebook.svg" alt="" />
-        </a>
-      </div>
-    </div>
-    <div id="popupWhatsapp" class="popupWhatsapp-container">
-      <div class="popupWhatsapp">
-        <p>Gostaria de agendar sua consulta ?</p>
-        <div>
-          <button onclick="redirectWhatsapp(true)">Sim</button>
-          <button onclick="closePopupWhatsapp()">Não</button>
-        </div>
-      </div>
-    </div>
     <header>
       <img src="./assets/Logo_header.svg" alt="Logo Randolf Machado" />
 
@@ -98,42 +61,42 @@
               <h3>Ansiedade</h3>
               <p class="dropdown-text" id="dropdownItem-1">Sofre diariamente com episódios de ansiedade, estresse, ataques do pânico ou distúrbios do sono.</p>
             </div>
-            <button onclick="activeDropdownItem(1)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(1)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
           <div class="dropdown-item">
             <div class="dropdown-context">
               <h3>Depressão</h3>
               <p class="dropdown-text" id="dropdownItem-2">Tristeza prolongada; perda de interesse ou prazer em atividades que antes eram apreciadas.</p>
             </div>
-            <button onclick="activeDropdownItem(2)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(2)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
           <div class="dropdown-item">
             <div class="dropdown-context">
               <h3>Dores crônicas</h3>
               <p class="dropdown-text" id="dropdownItem-3">Convive diariamente com dores crônicas e costuma ter enxaquecas sem razão aparente.</p>
             </div>
-            <button onclick="activeDropdownItem(3)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(3)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
           <div class="dropdown-item">
             <div class="dropdown-context">
               <h3>Problemas sexuais</h3>
               <p class="dropdown-text" id="dropdownItem-4">Terapia focada em melhorar a vida sexual e tratar as disfunções sexuais.</p>
             </div>
-            <button onclick="activeDropdownItem(4)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(4)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
           <div class="dropdown-item">
             <div class="dropdown-context">
               <h3>Relacionamento</h3>
               <p class="dropdown-text" id="dropdownItem-5">Melhorar relação com entes queridos. Libertar-se de relacionamentos abusivos. Lidar com o luto.</p>
             </div>
-            <button onclick="activeDropdownItem(5)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(5)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
           <div class="dropdown-item">
             <div class="dropdown-context">
               <h3>Baixa autoestima</h3>
               <p class="dropdown-text" id="dropdownItem-6">Se tem a presença de sentimentos de infelicidade e de insatisfação consigo mesmo.</p>
             </div>
-            <button onclick="activeDropdownItem(6)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(6)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
           <div class="dropdown-item">
             <div class="dropdown-context">
@@ -142,7 +105,7 @@
                 A terapia irá trabalhar as questões emocionais associadas e assim mudar o seu relacionamento com a comida.
               </p>
             </div>
-            <button onclick="activeDropdownItem(7)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(7)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
           <div class="dropdown-item">
             <div class="dropdown-context">
@@ -151,7 +114,7 @@
                 Tem medo de falar em público, medo de dirigir, medo de avião e outras fobias que te impedem de viver.
               </p>
             </div>
-            <button onclick="activeDropdownItem(8)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(8)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
           <div class="dropdown-item">
             <div class="dropdown-context">
@@ -160,7 +123,7 @@
                 Sente que não é capaz de enfrentar a situação ou problema, mesmo tendo todo o conhecimento ou habilidade.
               </p>
             </div>
-            <button onclick="activeDropdownItem(9)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+            <button onclick="activeDropdownItem(9)"><img src="./assets/+_icon.svg" alt="Imagem de um mais" /></button>
           </div>
         </div>
       </section>
@@ -168,7 +131,7 @@
       <section class="container-center container-third-session">
         <h3>A TRI consistente em 3 etapas</h3>
         <div class="item-container-geral primeiro">
-          <img src="./assets/Ilustracao_Etapa_1.svg" alt="" />
+          <img src="./assets/Ilustracao_Etapa_1.svg" alt="Ilustração de cabeça com peças de quebra cabeça e uma lupa azul em cima da cabeça" />
           <div class="text-container">
             <p>1</p>
             <div>
@@ -198,7 +161,7 @@
           </div>
         </div>
         <div class="item-container-geral terceiro">
-          <img src="./assets/Ilustracao_Etapa_3.svg" alt="" />
+          <img src="./assets/Ilustracao_Etapa_3.svg" alt="Ilustração de uma cabeça com um simbolo de mais" />
           <div class="text-container">
             <p>3</p>
             <div>
@@ -212,7 +175,7 @@
           </div>
         </div>
         <button class="removeButtonStyle button-agendar-vitisa" onclick="redirectWhatsapp()">
-          <img src="./assets/Whatsapp_icon_minimalista.svg" alt="" />
+          <img src="./assets/Whatsapp_icon_minimalista.svg" alt="Iconê do whatsapp" />
           Agende sua consulta
         </button>
       </section>
@@ -236,24 +199,24 @@
                 jornada.
               </p>
               <div class="logos-container">
-                <img src="./assets/logo_kraisch.png" alt="" />
-                <img src="./assets/logo_IN.png" alt="" />
+                <img src="./assets/logo_kraisch.png" alt="Logo do método Kraisch" />
+                <img src="./assets/logo_IN.png" alt="Logo da IN" />
               </div>
             </div>
 
-            <img class="imagens-esquerda primeira" src="./assets/primeira_foto_esquerda.png" alt="" />
-            <img class="imagens-esquerda segunda" src="./assets/segunda_foto_esquerda.png" alt="" />
+            <img class="imagens-esquerda primeira" src="./assets/primeira_foto_esquerda.png" alt="Imagem com o método kraisch" />
+            <img class="imagens-esquerda segunda" src="./assets/segunda_foto_esquerda.png" alt="Imagem com a logo do método kraisch" />
 
             <div class="imagens-direita">
-              <img class="primeira" src="./assets/primeira_foto_direita.png" alt="" />
-              <img class="segunda" src="./assets/segunda_foto_direita.png" alt="" />
+              <img class="primeira" src="./assets/primeira_foto_direita.png" alt="Foto de Randolf sorrindo" />
+              <img class="segunda" src="./assets/segunda_foto_direita.png" alt="Foto de Randolf Apresentando algo" />
             </div>
           </div>
         </div>
       </section>
 
       <section class="container-quinta-sessao">
-        <img src="./assets/background-depoimentos-2.png" alt="" class="background-depoimentos" />
+        <img src="./assets/background-depoimentos-2.png" alt="Pessoa de braços abertos olhando para montanhas nevadas" class="background-depoimentos" />
         <div class="container-center">
           <div class="grid-depoimentos">
             <h3 class="title">Depoimentos</h3>
@@ -303,7 +266,7 @@
         <div class="consulta-container">
           <h3>Entre em contato e agende sua consulta.</h3>
           <button class="removeButtonStyle" onclick="redirectWhatsapp()">
-            <img src="./assets/Whatsapp_icon.svg" class="whatsapp_icon" alt="" />
+            <img src="./assets/Whatsapp_icon.svg" class="whatsapp_icon" alt="Icone do whatsapp" />
           </button>
         </div>
         <div class="redes-sociais-container">
@@ -323,15 +286,51 @@
     </main>
     <footer>
       <div class="footer-container">
-        <img src="./assets/logo_footer.svg" alt="" />
+        <img src="./assets/logo_footer.svg" alt="Logo Randolf Machado" />
         <div>
           <b>Local de atendimento:</b>
-          <p>Bairro XXX, rua XXX número XXX, sala XXX, Joinville/SC. <br />CEP: XX.XXX-XXX</p>
+          <p>R. Abdon Batista, 121 - Centro, Joinville - SC. <br />CEP: 89201-010</p>
           <h3>Randolf Machado © 2022</h3>
         </div>
       </div>
     </footer>
+    <button onclick="redirectWhatsapp()" id="whatsapp-button" class="whatsapp-button">
+      <img src="./assets/Whatsapp_icon.svg" alt="Icone Whatsapp" />
+      <p>Agendar</p>
+    </button>
 
+    <button id="menu-button" onclick="openMenu()" class="menu-button">
+      <img src="./assets/menu.svg" alt="Icone de menu" />
+    </button>
+    <div id="menu" class="menu-container">
+      <img class="close-button" onclick="closeMenu()" src="./assets/close-menu.svg" alt="Icone de X par fechar menu" />
+      <a onclick="redirectWhatsapp()">Agenda sua consulta</a>
+      <hr />
+      <a href="#sobre-mim" onclick="closeMenu()">Sobre mim</a>
+      <hr />
+      <a href="#contato" onclick="closeMenu()">Contato</a>
+      <hr />
+      <div class="menu-buttons-container">
+        <a href="https://www.instagram.com/randolf.machado/" target="_blank"><img src="./assets/Instagram.svg" alt="Icone do Instagram" /></a>
+
+        <a href="https://www.facebook.com/randolfmachadohipnose/" target="_blank">
+          <img src="./assets/Whatsapp_icon_minimalista-2.svg" alt="Icone do Whatsapp" />
+        </a>
+
+        <a href="https://www.facebook.com/randolfmachadohipnose/" target="_blank">
+          <img src="./assets/Facebook.svg" alt="Icone do Facebook" />
+        </a>
+      </div>
+    </div>
+    <div id="popupWhatsapp" class="popupWhatsapp-container">
+      <div class="popupWhatsapp">
+        <p>Gostaria de agendar sua consulta ?</p>
+        <div>
+          <button onclick="redirectWhatsapp(true)">Sim</button>
+          <button onclick="closePopupWhatsapp()">Não</button>
+        </div>
+      </div>
+    </div>
     <script>
       let palavrasPrimeiraSessao = ["ansiedade", "depressão", "insônia", "compulsões"];
       let frasesDepoimentos = [

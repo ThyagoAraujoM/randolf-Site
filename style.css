@@ -88,13 +88,14 @@ body {
 
 .menu-container {
   position: fixed;
+  top: 0;
   right: -60%;
   width: 60%;
   padding: 20px 32px;
   height: 100%;
   background-color: white;
   backdrop-filter: blur(20px);
-  z-index: 4;
+  z-index: 6;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -156,6 +157,7 @@ body {
 }
 
 .popupWhatsapp-container {
+  top: 0;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -164,7 +166,7 @@ body {
   align-content: center;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.288);
-  z-index: 5;
+  z-index: 10;
 }
 
 .popupWhatsapp-container.active {
@@ -252,6 +254,7 @@ header .buttons-container a:last-of-type {
 .container-center {
   max-width: 1150px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 /* 
@@ -632,6 +635,7 @@ QUARTA SESSAO
   width: 100%;
   max-width: 564px;
   max-height: 401px;
+  border-bottom-right-radius: 50px;
 }
 
 .imagens-esquerda.primeira {
@@ -832,6 +836,7 @@ footer img {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  padding: 0 20px;
 }
 
 @media (max-width: 1000px) {
@@ -868,7 +873,15 @@ footer img {
       "imagem-esquerda-2 imagem-esquerda-1" / 1fr 1fr;
   }
 
-  .grid-context h3 {
+  .imagens-direita .segunda {
+    border-bottom-right-radius: 0px;
+  }
+
+  .imagens-esquerda.primeira {
+    border-bottom-right-radius: 50px;
+  }
+
+  imagens-esquerda segunda .grid-context h3 {
     font-size: 20px;
   }
   .grid-context h2 {
