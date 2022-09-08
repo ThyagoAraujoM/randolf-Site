@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button onclick="redirectWhatsapp()" id="whatsapp-button" class="whatsapp-button">
+      <img src="./assets/Whatsapp_icon.svg" alt="" />
+      <p>Agendar</p>
+    </button>
+
+    <button id="menu-button" onclick="openMenu()" class="menu-button">
+      <img src="./assets/menu.svg" alt="" />
+    </button>
+    <div id="menu" class="menu-container">
+      <img class="close-button" onclick="closeMenu()" src="./assets/close-menu.svg" alt="" />
+      <a onclick="redirectWhatsapp()">Agenda sua consulta</a>
+      <hr />
+      <a href="#sobre-mim" onclick="closeMenu()">Sobre mim</a>
+      <hr />
+      <a href="#contato" onclick="closeMenu()">Contato</a>
+      <hr />
+      <div class="menu-buttons-container">
+        <a href="https://www.instagram.com/randolf.machado/" target="_blank"><img src="./assets/Instagram.svg" alt="" /></a>
+
+        <a href="https://www.facebook.com/randolfmachadohipnose/" target="_blank">
+          <img src="./assets/Whatsapp_icon_minimalista-2.svg" alt="" />
+        </a>
+
+        <a href="https://www.facebook.com/randolfmachadohipnose/" target="_blank">
+          <img src="./assets/Facebook.svg" alt="" />
+        </a>
+      </div>
+    </div>
+    <div id="popupWhatsapp" class="popupWhatsapp-container">
+      <div class="popupWhatsapp">
+        <p>Gostaria de agendar sua consulta ?</p>
+        <div>
+          <button onclick="redirectWhatsapp(true)">Sim</button>
+          <button onclick="closePopupWhatsapp()">Não</button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <img src="./assets/Logo_header.svg" alt="Logo Randolf Machado" />
+
+      <div class="buttons-container">
+        <a href="#sobre-mim">Sobre mim</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </header>
+    <img class="section-1-image" src="./assets/Sessao_1.png" alt="Mulher em cima de rocha olhando para paisagem" />
+    <div class="section-1-image-opacity"></div>
+    <main>
+      <div class="container-center fisrt-session-container">
+        <div class="first-container">
+          <h2>
+            Pare de sofrer com <br />
+            <div style="height: 60px">
+              <div id="carroselPalavras" class="carrosel-palavras">
+                <span id="arrayPalavras" class="carrosel-palavras-item active">Ansiedade</span>
+                <span id="arrayPalavras" class="carrosel-palavras-item">Depressão</span>
+                <span id="arrayPalavras" class="carrosel-palavras-item">Insônia</span>
+                <span id="arrayPalavras" class="carrosel-palavras-item">Compulsões</span>
+              </div>
+            </div>
+          </h2>
+          <p>Recupere o controle da sua vida com a Terapia de Reintegração Implícita</p>
+        </div>
+        <div class="second-container">
+          <h3>
+            Por que escolher a
+            <b>Terabia de Reintegração Implícita (TRI)</b>
+          </h3>
+          <p>
+            Porque é uma abordagem de Terapia Breve com bases nas neurociências e tem como facilitador a Hipnose. Trabalha de forma pontual e individualizada na
+            resolução das demandas emocionais que estão por trás dos seus sintomas.
+          </p>
+        </div>
+      </div>
+
+      <section class="container-center dropdown-container">
+        <div class="dropdown-about">
+          <h3>E quando buscar auxílio da <b>Terabia Breve ? </b></h3>
+          <p>Em qualquer situção que haja um desgaste emocional e metal como:</p>
+        </div>
+        <div class="dropdown-group">
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Ansiedade</h3>
+              <p class="dropdown-text" id="dropdownItem-1">Sofre diariamente com episódios de ansiedade, estresse, ataques do pânico ou distúrbios do sono.</p>
+            </div>
+            <button onclick="activeDropdownItem(1)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Depressão</h3>
+              <p class="dropdown-text" id="dropdownItem-2">Tristeza prolongada; perda de interesse ou prazer em atividades que antes eram apreciadas.</p>
+            </div>
+            <button onclick="activeDropdownItem(2)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Dores crônicas</h3>
+              <p class="dropdown-text" id="dropdownItem-3">Convive diariamente com dores crônicas e costuma ter enxaquecas sem razão aparente.</p>
+            </div>
+            <button onclick="activeDropdownItem(3)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Problemas sexuais</h3>
+              <p class="dropdown-text" id="dropdownItem-4">Terapia focada em melhorar a vida sexual e tratar as disfunções sexuais.</p>
+            </div>
+            <button onclick="activeDropdownItem(4)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Relacionamento</h3>
+              <p class="dropdown-text" id="dropdownItem-5">Melhorar relação com entes queridos. Libertar-se de relacionamentos abusivos. Lidar com o luto.</p>
+            </div>
+            <button onclick="activeDropdownItem(5)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Baixa autoestima</h3>
+              <p class="dropdown-text" id="dropdownItem-6">Se tem a presença de sentimentos de infelicidade e de insatisfação consigo mesmo.</p>
+            </div>
+            <button onclick="activeDropdownItem(6)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Compulsão alimentar</h3>
+              <p class="dropdown-text" id="dropdownItem-7">
+                A terapia irá trabalhar as questões emocionais associadas e assim mudar o seu relacionamento com a comida.
+              </p>
+            </div>
+            <button onclick="activeDropdownItem(7)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Fobias</h3>
+              <p class="dropdown-text" id="dropdownItem-8">
+                Tem medo de falar em público, medo de dirigir, medo de avião e outras fobias que te impedem de viver.
+              </p>
+            </div>
+            <button onclick="activeDropdownItem(8)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+          <div class="dropdown-item">
+            <div class="dropdown-context">
+              <h3>Insegurança</h3>
+              <p class="dropdown-text" id="dropdownItem-9">
+                Sente que não é capaz de enfrentar a situação ou problema, mesmo tendo todo o conhecimento ou habilidade.
+              </p>
+            </div>
+            <button onclick="activeDropdownItem(9)"><img src="./assets/+_icon.svg" alt="Bottão com imagem de um mais" /></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-center container-third-session">
+        <h3>A TRI consistente em 3 etapas</h3>
+        <div class="item-container-geral primeiro">
+          <img src="./assets/Ilustracao_Etapa_1.svg" alt="" />
+          <div class="text-container">
+            <p>1</p>
+            <div>
+              <h4><span>1</span> Avaliação</h4>
+              <p>
+                Aqui que vamos conversar, você vai contar o que está te incomodando e como vem se sentindo. Também vou tirar qualquer dúvida, mito ou medo que
+                você possa ter a respeito do processo. Você sairá com a sua sessão de terapia agendada, pronto para iniciar o tratamento e assumir a sua vida!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item-container-geral segundo">
+          <img src="./assets/Ilustracao_Etapa_2.svg" alt="" />
+          <div class="text-container">
+            <p>2</p>
+            <div>
+              <h4><span>2</span> Terapia</h4>
+              <p>
+                Vou lhe ajudar a resolver o conflito emocional que vem te limitando e te causando tanta dor, aquele que conversamos na primeira sessão. Esse
+                momento é seu, e nessa fase buscamos passar por 3 etapas primordiais para que o sucesso da terapia seja obtido. Revelar, Compreender e Reeducar
+                suas emoções e sentimentos.
+              </p>
+              <p>
+                A sessão pode durar até 3 horas, então venha com roupas confortáveis para aproveitar melhor esse momento único e maravilhoso de transformação.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item-container-geral terceiro">
+          <img src="./assets/Ilustracao_Etapa_3.svg" alt="" />
+          <div class="text-container">
+            <p>3</p>
+            <div>
+              <h4><span>3</span> Retorno</h4>
+              <p>Após a sessão de terapia vamos agendar a sua consulta de retorno para acompanharmos a sua evolução, “média de 30 dias".</p>
+              <p>
+                Vale ressaltar que cerca de 90% dos clientes resolvem seus conflitos em duas sessões. Entendo que cada pessoa é um ser único, com suas
+                necessidades e individualidades e se for necessário fazer mais de uma sessão, para o mesmo problema, ela já está inclusa no pacote.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="removeButtonStyle button-agendar-vitisa" onclick="redirectWhatsapp()">
+          <img src="./assets/Whatsapp_icon_minimalista.svg" alt="" />
+          Agende sua consulta
+        </button>
+      </section>
+
+      <section class="container-center grid-fotos">
+        <div class="quadrado-azul"></div>
+        <div id="sobre-mim" class="container-quarta-sessao">
+          <div class="grid">
+            <div class="grid-context">
+              <h3>Sobre seu terapeuta</h3>
+              <h2>Randolf Machado</h2>
+              <p>Olá sou o Randolf Machado e irei lhe auxiliar nesta jornada.</p>
+              <p>
+                Há mais de 2 anos trabalho como Hipnoterapeuta auxiliando as pessoas a se libertarem de suas demandas emocionais. Sou acadêmico do 5 semestre de
+                Psicologia, especialista em Terapia de Reintegração Implícita pelo Instituto Kraisch, e hipnotista pelo Instituto Lucas Naves entre outras
+                formações de PNL e Hipnose.
+              </p>
+              <p>
+                Desde muito jovem apaixonado pelas pessoas e suas histórias de vida, entrei nesta jornada de desenvolvimento pessoal e decidi ajudar pessoas
+                como você, que carrega dores reais porem incompreendidas... e como eu sei disto? Já tive essas dores também e será uma honra guia-lo nesta
+                jornada.
+              </p>
+              <div class="logos-container">
+                <img src="./assets/logo_kraisch.png" alt="" />
+                <img src="./assets/logo_IN.png" alt="" />
+              </div>
+            </div>
+
+            <img class="imagens-esquerda primeira" src="./assets/primeira_foto_esquerda.png" alt="" />
+            <img class="imagens-esquerda segunda" src="./assets/segunda_foto_esquerda.png" alt="" />
+
+            <div class="imagens-direita">
+              <img class="primeira" src="./assets/primeira_foto_direita.png" alt="" />
+              <img class="segunda" src="./assets/segunda_foto_direita.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-quinta-sessao">
+        <img src="./assets/background-depoimentos-2.png" alt="" class="background-depoimentos" />
+        <div class="container-center">
+          <div class="grid-depoimentos">
+            <h3 class="title">Depoimentos</h3>
+            <div class="first">
+              <p>“Me sinto livre, como nunca me senti antes.”</p>
+              <h4>- Ana Claudia</h4>
+            </div>
+            <div class="second">
+              <p>“Nunca imaginei que a terapia poderia ser tão profunda.”</p>
+              <h4>- Cleiton Diniz</h4>
+            </div>
+            <div class="third">
+              <p>“Minhas dores sumiram, até parece mágica. Isso que sou cética.”</p>
+              <h4>- Marlene Amorim</h4>
+            </div>
+            <div class="fourth">
+              <p>“Estou em um estado de espirito que muito tempo não sentia.”</p>
+              <h4>- Mario M.</h4>
+            </div>
+          </div>
+
+          <div class="depoimentos-mobile">
+            <h3 class="title">Depoimentos</h3>
+            <div id="carroselDepoimentos" class="carrosel-depoimentos">
+              <div class="carrosel-depoimentos-item active">
+                <p id="frase-depoimento">“Me sinto livre, como nunca me senti antes.”</p>
+                <b id="pessoa-depoimento">- Ana Claudia</b>
+              </div>
+              <div class="carrosel-depoimentos-item">
+                <p id="frase-depoimento">“Nunca imaginei que a terapia poderia ser tão profunda.”</p>
+                <b id="pessoa-depoimento">- Cleiton Diniz</b>
+              </div>
+              <div class="carrosel-depoimentos-item">
+                <p id="frase-depoimento">“Minhas dores sumiram, até parece mágica. Isso que sou cética.”</p>
+                <b id="pessoa-depoimento">- Marlene Amorim</b>
+              </div>
+              <div class="carrosel-depoimentos-item">
+                <p id="frase-depoimento">“Estou em um estado de espirito que muito tempo não sentia.”</p>
+                <b id="pessoa-depoimento">- Mario M.</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="container-sexta-sessao">
+        <div class="consulta-container">
+          <h3>Entre em contato e agende sua consulta.</h3>
+          <button class="removeButtonStyle" onclick="redirectWhatsapp()">
+            <img src="./assets/Whatsapp_icon.svg" class="whatsapp_icon" alt="" />
+          </button>
+        </div>
+        <div class="redes-sociais-container">
+          <h3>Redes Sociais</h3>
+          <div class="rede-social-container">
+            <img src="./assets/Instagram.svg" alt="Instagram Logo" />
+            <a href="https://www.instagram.com/randolf.machado/" target="_blank"> <p>@randolf.machado</p></a>
+          </div>
+          <div class="rede-social-container">
+            <img src="./assets/Facebook.svg" alt="Facebook Logo" />
+            <a href="https://www.facebook.com/randolfmachadohipnose/" target="_blank">
+              <p>/randolfmachadohipnose</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <img src="./assets/logo_footer.svg" alt="" />
+        <div>
+          <b>Local de atendimento:</b>
+          <p>Bairro XXX, rua XXX número XXX, sala XXX, Joinville/SC. <br />CEP: XX.XXX-XXX</p>
+          <h3>Randolf Machado © 2022</h3>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let palavrasPrimeiraSessao = ["ansiedade", "depressão", "insônia", "compulsões"];
+      let frasesDepoimentos = [
+        {
+          frase: "“Me sinto livre, como nunca me senti antes.”",
+          pessoa: "- Ana Claudia",
+        },
+        {
+          frase: "“Nunca imaginei que a terapia poderia ser tão profunda.”",
+          pessoa: "- Cleiton Diniz",
+        },
+        {
+          frase: "“Minhas dores sumiram, até parece mágica. Isso que sou cética.”",
+          pessoa: "- Marlene Amorim",
+        },
+        {
+          frase: "“Estou em um estado de espirito que muito tempo não sentia.”",
+          pessoa: "- Mario M.",
+        },
+      ];
+
+      let numeroPalavraAtual = 0;
+      let mouseenter = false;
+      let currentProject = 0;
+
+      function openMenu() {
+        document.querySelector("#menu").classList.add("active");
+        document.querySelector("#menu-button").classList.add("off");
+        document.querySelector("#whatsapp-button").classList.add("off");
+      }
+
+      function closeMenu() {
+        document.querySelector("#menu").classList.remove("active");
+        document.querySelector("#menu-button").classList.remove("off");
+        document.querySelector("#whatsapp-button").classList.remove("off");
+      }
+      function createCarroselPalavras() {
+        // setInterval(() => {
+        //   if (numeroPalavraAtual < palavrasPrimeiraSessao.length - 1) {
+        //     numeroPalavraAtual++;
+        //   } else {
+        //     numeroPalavraAtual = 0;
+        //   }
+        //   // let palavraAtual = palavrasPrimeiraSessao[numeroPalavraAtual];
+        //   let carroselPalavras = document.querySelector("#carroselPalavras");
+        //   carroselPalavras.scrollWidth = "500px";
+
+        //   // document.querySelector("#arrayPalavras").classList.add("fade-in");
+        //   // setTimeout(() => {
+        //   //   document.querySelector("#arrayPalavras").classList.remove("fade-in");
+        //   //   document.querySelector("#arrayPalavras").innerHTML = palavraAtual;
+        //   // }, 500);
+        // }, 3000);
+
+        let project = document.querySelectorAll("#carroselPalavras");
+        let allProjects = document.querySelectorAll(".carrosel-palavras-item");
+        let allDepoimentos = document.querySelectorAll(".carrosel-depoimentos-item");
+        let maxProjects = Number(document.querySelectorAll(".carrosel-palavras-item").length - 1);
+        for (let i of project) {
+          i.addEventListener("mouseenter", () => {
+            mouseEnter();
+          });
+
+          i.addEventListener("mouseout", () => {
+            mouseOut();
+          });
+        }
+
+        let firstTime = true;
+        setInterval(() => {
+          if (!mouseenter) {
+            if (currentProject > maxProjects) {
+              currentProject = 0;
+              allProjects[currentProject].classList.remove("desactive");
+              allProjects[currentProject].classList.add("active");
+              allDepoimentos[currentProject].classList.remove("desactive");
+              allDepoimentos[currentProject].classList.add("active");
+
+              allProjects[maxProjects].classList.remove("active");
+              allProjects[maxProjects].classList.add("desactive");
+              allDepoimentos[maxProjects].classList.remove("active");
+              allDepoimentos[maxProjects].classList.add("desactive");
+            } else {
+              if (currentProject == 0 && firstTime) {
+                allProjects[currentProject].classList.remove("desactive");
+                allProjects[currentProject].classList.add("active");
+
+                allDepoimentos[currentProject].classList.remove("desactive");
+                allDepoimentos[currentProject].classList.add("active");
+                currentProject++;
+                firstTime = false;
+              } else if (currentProject == 0) {
+                currentProject++;
+                allProjects[currentProject].classList.remove("desactive");
+                allProjects[currentProject].classList.add("active");
+                allProjects[currentProject - 1].classList.remove("active");
+                allProjects[currentProject - 1].classList.add("desactive");
+
+                allDepoimentos[currentProject].classList.remove("desactive");
+                allDepoimentos[currentProject].classList.add("active");
+                allDepoimentos[currentProject - 1].classList.remove("active");
+                allDepoimentos[currentProject - 1].classList.add("desactive");
+                currentProject++;
+              } else {
+                allProjects[currentProject].classList.remove("desactive");
+                allProjects[currentProject].classList.add("active");
+                allProjects[currentProject - 1].classList.remove("active");
+                allProjects[currentProject - 1].classList.add("desactive");
+                allDepoimentos[currentProject].classList.remove("desactive");
+                allDepoimentos[currentProject].classList.add("active");
+                allDepoimentos[currentProject - 1].classList.remove("active");
+                allDepoimentos[currentProject - 1].classList.add("desactive");
+                currentProject++;
+              }
+            }
+            notMobile = false;
+          }
+        }, 3000);
+      }
+
+      function mouseEnter() {
+        mouseenter = true;
+      }
+
+      function mouseOut() {
+        mouseenter = false;
+      }
+
+      function activeDropdownItem(item) {
+        let dropDownItem = document.querySelector(`#dropdownItem-${item}`);
+        dropDownItem.classList.toggle("active");
+
+        let button = dropDownItem.parentNode.parentNode.querySelector("button");
+        button.classList.toggle("active");
+      }
+
+      function start() {
+        createCarroselPalavras();
+      }
+
+      function redirectWhatsapp(redirect) {
+        if (window.innerWidth < 768) {
+          closeMenu();
+          if (redirect) {
+            closePopupWhatsapp();
+            window.open("https://api.whatsapp.com/send?phone=5527999999991&text=Oi,%20quero%20agendar%20uma%20consulta!", "_blank");
+          } else {
+            openPopupWhatsapp();
+          }
+        } else {
+          window.open("https://api.whatsapp.com/send?phone=5527999999991&text=Oi,%20quero%20agendar%20uma%20consulta!", "_blank");
+        }
+      }
+
+      function openPopupWhatsapp() {
+        document.querySelector("#popupWhatsapp").classList.add("active");
+      }
+
+      function closePopupWhatsapp() {
+        document.querySelector("#popupWhatsapp").classList.remove("active");
+      }
+
+      start();
+    </script>
+  </body>
+</html>
