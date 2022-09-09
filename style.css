@@ -466,7 +466,7 @@ SEGUNDA SESSÃO
 
 .dropdown-group .dropdown-item button.active {
   transition: all 500ms ease-in-out;
-  /* transform: rotate(45deg); */
+  transform: rotate(45deg);
 }
 .dropdown-group .dropdown-item button.active img {
   filter: brightness(0.3);
