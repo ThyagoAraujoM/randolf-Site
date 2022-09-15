@@ -689,6 +689,7 @@ QUARTA SESSAO
   max-width: 576px;
   max-height: 422px;
   width: 100%;
+  border-bottom-left-radius: 50px;
 }
 
 /* 
