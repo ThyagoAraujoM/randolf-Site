@@ -586,6 +586,7 @@ TERCEIRA SESSÃO
   border: none;
   gap: 10px;
   margin-top: 140px;
+  margin-bottom: 40px;
 }
 
 /* 
@@ -597,13 +598,17 @@ QUARTA SESSAO
   max-width: 1920px;
   width: 100%;
   margin-top: 150px;
-  padding: 180px 20px 145px 20px;
+  padding: 140px 20px 145px 20px;
   position: relative;
 }
 
 .container-quarta-sessao {
   max-width: 1155px;
   margin: 0 auto;
+}
+
+.container-quarta-sessao.mobile {
+  display: none;
 }
 
 .quadrado-azul {
@@ -655,9 +660,6 @@ QUARTA SESSAO
 }
 .imagens-direita {
   grid-area: imagens-direita;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 .imagens-direita .primeira {
@@ -668,6 +670,7 @@ QUARTA SESSAO
 }
 
 .imagens-direita .segunda {
+  position: relative;
   width: 100%;
   max-width: 564px;
   max-height: 401px;
@@ -905,7 +908,6 @@ footer img {
 
   .container-quarta-sessao .grid {
     display: grid;
-
     grid:
       "contexto imagens-direita"
       "imagem-esquerda-2 imagens-direita"
@@ -975,6 +977,7 @@ footer img {
   }
 }
 
+/* header - 1 sessão */
 @media (max-width: 800px) {
   header .buttons-container {
     display: none;
@@ -1020,7 +1023,9 @@ footer img {
     font-weight: bold;
     margin-bottom: 10px;
   }
-
+}
+/* 2 sessão */
+@media (max-width: 800px) {
   /* Segunda sessão */
   .dropdown-container {
     margin-top: 60px;
@@ -1053,7 +1058,9 @@ footer img {
     display: block;
     margin-bottom: 10px;
   }
-
+}
+/* 3 sessão */
+@media (max-width: 800px) {
   /* terceira sessão */
 
   .container-third-session .item-container-geral,
@@ -1096,50 +1103,121 @@ footer img {
   .button-agendar-visita img {
     width: 26px;
   }
+}
+/* 4 sessão */
+@media (max-width: 800px) {
   /* quarto container */
 
   .container-center.grid-fotos {
-    margin-top: 40px;
-    padding: 40px 20px 20px 20px;
+    margin-top: 0px;
+    padding: 40px 0px 20px 0px;
     position: relative;
   }
 
   .quadrado-azul {
     display: none;
   }
-
-  .container-quarta-sessao .grid {
-    display: grid;
-    padding: 0;
-    grid:
-      "imagens-direita"
-      "contexto";
-  }
-  .grid-context {
-    grid-area: contexto;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px 20px 20px 20px;
+  .container-quarta-sessao {
+    display: none;
   }
 
-  .imagens-direita {
-    align-items: center;
+  .container-quarta-sessao.mobile {
+    display: flex;
+    flex-direction: column;
   }
 
-  .imagens-direita .primeira {
-    border-top-right-radius: 0px;
+  .container-quarta-sessao.mobile .primeiro-texto {
+    padding: 0px 20px;
+  }
+
+  .container-quarta-sessao.mobile .primeiro-texto h3 {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  .container-quarta-sessao.mobile .primeiro-texto h2 {
+    font-size: 32px;
+  }
+
+  .container-quarta-sessao.mobile .primeiro-texto p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .container-quarta-sessao.mobile .fotos-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .container-quarta-sessao.mobile .fotos-container img {
+    height: 250px;
+    object-fit: contain;
+  }
+
+  .container-quarta-sessao.mobile .fotos-container .primeira {
+    align-self: flex-end;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .container-quarta-sessao.mobile .fotos-container .segunda {
+    align-self: flex-start;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-top: -50px;
+  }
+  .container-quarta-sessao.mobile .fotos-container .terceira {
+    align-self: flex-end;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-top: -50px;
+  }
+
+  .container-quarta-sessao.mobile .segundo-texto-container .primeira-imagem {
+    object-fit: cover;
+    width: 100%;
     border-top-left-radius: 50px;
-  }
-  .imagens-direita .segunda {
-    display: none;
-  }
-  .imagens-esquerda.primeira {
-    display: none;
-  }
-  .imagens-esquerda.segunda {
-    display: none;
+    border-top-right-radius: 50px;
+    max-height: 700px;
   }
 
+  .container-quarta-sessao.mobile .segundo-texto-container div {
+    padding: 25px 20px;
+  }
+  /*
+.container-quarta-sessao .grid {
+  display: grid;
+  padding: 0;
+  grid:
+    "imagens-direita"
+    "contexto";
+}
+.grid-context {
+  grid-area: contexto;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
+}
+
+.imagens-direita {
+  align-items: center;
+}
+
+.imagens-direita .primeira {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 50px;
+}
+.imagens-direita .segunda {
+  display: none;
+}
+.imagens-esquerda.primeira {
+  display: none;
+}
+.imagens-esquerda.segunda {
+  display: none;
+} */
+}
+/* 5 sessão */
+@media (max-width: 800px) {
   .grid-depoimentos {
     display: none;
   }
@@ -1217,7 +1295,10 @@ footer img {
       margin-left: -150px;
     }
   }
+}
 
+/* 6 sessão */
+@media (max-width: 800px) {
   .container-sexta-sessao {
     margin-top: 45px;
     margin-bottom: 50px;
@@ -1233,24 +1314,9 @@ footer img {
 }
 
 @media (max-width: 600px) {
-  .container-center.grid-fotos {
-    padding: 0;
+  .container-quarta-sessao.mobile .segundo-texto-container .primeira-imagem {
+    max-height: 600px;
   }
-
-  .grid-context {
-    padding: 20px 40px;
-  }
-
-  .imagens-direita {
-    height: 606px;
-  }
-  .imagens-direita .primeira {
-    /* width: 100%;
-    max-width: 100%; */
-    height: 100%;
-    object-fit: cover;
-  }
-
   footer .footer-container {
     display: flex;
     flex-direction: column-reverse;
@@ -1271,9 +1337,42 @@ footer img {
     display: none;
   }
 }
+@media (max-width: 500px) {
+  .container-quarta-sessao.mobile .fotos-container img {
+    height: 220px;
+    object-fit: contain;
+  }
+}
 
 @media (max-width: 420px) {
-  .imagens-direita {
-    height: 406px;
+  @media (max-width: 500px) {
+    .container-quarta-sessao.mobile .fotos-container img {
+      height: 180px;
+      object-fit: contain;
+    }
+  }
+  .container-quarta-sessao.mobile .fotos-container .primeira {
+    object-fit: cover;
+    max-width: calc(100% - 100px);
+  }
+  .container-quarta-sessao.mobile .fotos-container .segunda {
+    align-self: flex-start;
+    object-fit: cover;
+    max-width: calc(100% - 100px);
+
+    margin-top: -50px;
+  }
+  .container-quarta-sessao.mobile .fotos-container .terceira {
+    max-width: calc(100% - 100px);
+    object-fit: cover;
+    margin-top: -50px;
+  }
+
+  .container-quarta-sessao.mobile .segundo-texto-container .primeira-imagem {
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    max-height: 500px;
   }
 }
