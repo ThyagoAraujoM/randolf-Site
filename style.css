@@ -267,6 +267,11 @@ header {
   justify-content: space-between;
 }
 
+header img {
+  max-width: 286px;
+  width: 100%;
+}
+
 header .buttons-container {
   display: flex;
   align-items: center;
@@ -871,6 +876,7 @@ footer .footer-container {
 
 footer img {
   max-width: 388px;
+  width: 100%;
   max-height: 169px;
 }
 
