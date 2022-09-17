@@ -762,6 +762,8 @@ Quinta sessão
 }
 
 .grid-depoimentos .title {
+  font-size: 38px;
+  font-weight: bold;
   grid-area: title;
   display: flex;
   justify-content: center;
@@ -1265,7 +1267,7 @@ footer img {
     font-style: italic;
   }
 
-  .depoimentos-mobile h3 {
+  .depoimentos-mobile .title {
     font-size: 25px;
     font-weight: bold;
   }
