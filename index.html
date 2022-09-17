@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <header>
       <img src="./assets/Logo_header.svg" alt="Logo Randolf Machado" />
@@ -30,17 +31,15 @@
     <main>
       <div class="container-center fisrt-session-container">
         <div class="first-container">
-          <p>
-            Pare de sofrer com <br />
-            <div class="carroselPalarvas-container">
-              <div id="carroselPalavras" class="carrosel-palavras">
-                <span id="arrayPalavras" class="carrosel-palavras-item active">Ansiedade</span>
-                <span id="arrayPalavras" class="carrosel-palavras-item">Depressão</span>
-                <span id="arrayPalavras" class="carrosel-palavras-item">Insônia</span>
-                <span id="arrayPalavras" class="carrosel-palavras-item">Compulsões</span>
-              </div>
+          <p>Pare de sofrer com</p>
+          <div class="carroselPalarvas-container">
+            <div id="carroselPalavras" class="carrosel-palavras">
+              <span id="arrayPalavras" class="carrosel-palavras-item active">Ansiedade</span>
+              <span id="arrayPalavras" class="carrosel-palavras-item">Depressão</span>
+              <span id="arrayPalavras" class="carrosel-palavras-item">Insônia</span>
+              <span id="arrayPalavras" class="carrosel-palavras-item">Compulsões</span>
             </div>
-          </p>
+          </div>
           <h1>Recupere o controle da sua vida com a Terapia de Reintegração Implícita.</h1>
         </div>
         <div class="second-container">
@@ -63,7 +62,7 @@
         <div class="dropdown-group">
           <div class="dropdown-item" onclick="activeDropdownItem(1)">
             <div class="dropdown-context">
-              <b>Ansiedade</b>
+              <p class="dropdown-title">Ansiedade</p>
               <p class="dropdown-text" id="dropdownItem-1">Sofre diariamente com episódios de ansiedade, estresse, ataques do pânico ou distúrbios do sono.</p>
             </div>
             <button onclick="" class=""><img src="./assets/+_icon.svg" alt="Ícone de um mais" /></button>
@@ -71,16 +70,15 @@
 
           <div class="dropdown-item" onclick="activeDropdownItem(2)">
             <div class="dropdown-context">
-              <b>Depressão</b>
+              <p class="dropdown-title">Depressão</p>
               <p class="dropdown-text" id="dropdownItem-2">Tristeza prolongada, perda de interesse ou prazer em atividades que antes eram apreciadas.</p>
             </div>
             <button><img src="./assets/+_icon.svg" alt="Ícone de um mais" /></button>
           </div>
           <div class="dropdown-item" onclick="activeDropdownItem(3)">
             <div class="dropdown-context">
-              <p>
-                <b>Dores crônicas</b>
-             </p>
+              <p class="dropdown-title">Dores crônicas</p>
+
               <p class="dropdown-text" id="dropdownItem-3">
                 Convive diariamente com dores crônicas como a Fibromialgia ou costuma ter enxaquecas sem razão aparente.
               </p>
@@ -89,30 +87,29 @@
           </div>
           <div class="dropdown-item" onclick="activeDropdownItem(4)">
             <div class="dropdown-context">
-              <p>
-              <b>Problemas sexuais</b>
-            </p>
+              <p class="dropdown-title">Problemas sexuais</p>
+
               <p class="dropdown-text" id="dropdownItem-4">Terapia focada em melhorar a vida sexual e tratar as disfunções sexuais.</p>
             </div>
             <button><img src="./assets/+_icon.svg" alt="Ícone de um mais" /></button>
           </div>
           <div class="dropdown-item" onclick="activeDropdownItem(5)">
             <div class="dropdown-context">
-              <p><b>Relacionamento</b></p>
+              <p class="dropdown-title">Relacionamento</p>
               <p class="dropdown-text" id="dropdownItem-5">Melhorar relação com entes queridos. Libertar-se de relacionamentos abusivos ou lidar com o luto.</p>
             </div>
             <button><img src="./assets/+_icon.svg" alt="Ícone de um mais" /></button>
           </div>
           <div class="dropdown-item" onclick="activeDropdownItem(6)">
             <div class="dropdown-context">
-              <p><b>Baixa autoestima</b></p>
+              <p class="dropdown-title">Baixa autoestima</p>
               <p class="dropdown-text" id="dropdownItem-6">Se tem a presença de sentimentos de infelicidade e de insatisfação consigo mesmo.</p>
             </div>
             <button><img src="./assets/+_icon.svg" alt="Ícone de um mais" /></button>
           </div>
           <div class="dropdown-item" onclick="activeDropdownItem(7)">
             <div class="dropdown-context">
-              <p><b>Compulsão alimentar</b></p>
+              <p class="dropdown-title">Compulsão alimentar</p>
               <p class="dropdown-text" id="dropdownItem-7">
                 A terapia irá trabalhar as questões emocionais associadas e assim mudar o seu relacionamento com a comida.
               </p>
@@ -121,7 +118,7 @@
           </div>
           <div class="dropdown-item" onclick="activeDropdownItem(8)">
             <div class="dropdown-context">
-             <p> <b>Fobias</b></p>
+              <p class="dropdown-title">Fobias</p>
               <p class="dropdown-text" id="dropdownItem-8">
                 Tem medo de falar em público, medo de dirigir, medo de avião e outras fobias que te impedem de viver.
               </p>
@@ -130,9 +127,7 @@
           </div>
           <div class="dropdown-item" onclick="activeDropdownItem(9)">
             <div class="dropdown-context">
-
-
-             <p> <b>Insegurança</b></p>
+              <p class="dropdown-title">Insegurança</p>
               <p class="dropdown-text" id="dropdownItem-9">
                 Sente que não é capaz de enfrentar a situação ou problema, mesmo tendo todo o conhecimento ou habilidade.
               </p>
@@ -323,7 +318,9 @@
           <h3>Redes Sociais</h3>
           <div class="rede-social-container">
             <img src="./assets/Instagram.svg" alt="Instagram Logo" />
-            <a href="https://www.instagram.com/randolf.machado/" target="_blank"> <p>@randolf.machado</p></a>
+            <a href="https://www.instagram.com/randolf.machado/" target="_blank">
+              <p>@randolf.machado</p>
+            </a>
           </div>
           <div class="rede-social-container">
             <img src="./assets/Facebook.svg" alt="Facebook Logo" />
@@ -340,7 +337,7 @@
         <div>
           <b>Local de atendimento:</b>
           <p>R. Abdon Batista, 121 - Centro, Joinville - SC. <br />CEP: 89201-010</p>
-          <p><b>Randolf Machado © 2022</b></p>
+          <p class="copyright">Randolf Machado © 2022</p>
         </div>
       </div>
     </footer>

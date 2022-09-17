@@ -417,7 +417,7 @@ SEGUNDA SESSÃO
   flex-direction: column;
   align-items: center;
 }
-.dropdown-about h3 {
+.dropdown-about {
   font-size: 34px;
   font-weight: normal;
 }
@@ -465,7 +465,7 @@ SEGUNDA SESSÃO
   border-bottom: 3px solid #afcce6;
 }
 
-.dropdown-group .dropdown-item b {
+.dropdown-group .dropdown-item .dropdown-title {
   font-family: "Bahnschrift", sans-serif;
   font-size: 27px;
   font-weight: normal;
@@ -874,6 +874,10 @@ footer {
   background-color: #daebfa;
 }
 
+footer .copyright {
+  font-weight: bold;
+}
+
 footer .footer-container {
   padding: 75px 20px;
   display: flex;
@@ -1022,6 +1026,13 @@ footer img {
     margin-top: 50px;
     padding: 0;
   }
+
+  .fisrt-session-container .first-container p,
+  .fisrt-session-container .first-container span {
+    font-size: 35px;
+    font-family: "Noto Sans", sans-serif;
+  }
+
   .fisrt-session-container .first-container {
     margin: 0 20px;
   }
@@ -1330,6 +1341,23 @@ footer img {
 }
 
 @media (max-width: 600px) {
+  .fisrt-session-container .first-container p,
+  .fisrt-session-container .first-container span {
+    font-size: 30px;
+    font-family: "Noto Sans", sans-serif;
+  }
+  .fisrt-session-container .first-container h1 {
+    margin-top: 10px;
+    font-size: 16px;
+    max-width: 360px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: normal;
+  }
+
+  .dropdown-group .dropdown-item .dropdown-title {
+    font-size: 25px;
+  }
+
   .container-quarta-sessao.mobile .segundo-texto-container .primeira-imagem {
     max-height: 600px;
   }
@@ -1354,6 +1382,9 @@ footer img {
   }
 }
 @media (max-width: 500px) {
+  header {
+    margin-right: 70px;
+  }
   .container-quarta-sessao.mobile .fotos-container img {
     height: 220px;
     object-fit: contain;
@@ -1361,12 +1392,15 @@ footer img {
 }
 
 @media (max-width: 420px) {
-  @media (max-width: 500px) {
-    .container-quarta-sessao.mobile .fotos-container img {
-      height: 180px;
-      object-fit: contain;
-    }
+  .dropdown-group .dropdown-item .dropdown-title {
+    font-size: 20px;
   }
+
+  .container-quarta-sessao.mobile .fotos-container img {
+    height: 180px;
+    object-fit: contain;
+  }
+
   .container-quarta-sessao.mobile .fotos-container .primeira {
     object-fit: cover;
     max-width: calc(100% - 100px);
