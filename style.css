@@ -17,6 +17,7 @@ b {
   font-family: "Noto Sans", sans-serif;
   color: #071e2e;
 }
+h1,
 h2,
 h3,
 h4,
@@ -307,7 +308,7 @@ PRIMEIRA SESSÃO
   padding: 0 20px;
   overflow: initial;
 }
-.fisrt-session-container .first-container h2,
+.fisrt-session-container .first-container p,
 .fisrt-session-container .first-container span {
   font-size: 45px;
   font-family: "Noto Sans", sans-serif;
@@ -464,7 +465,8 @@ SEGUNDA SESSÃO
   border-bottom: 3px solid #afcce6;
 }
 
-.dropdown-group .dropdown-item h3 {
+.dropdown-group .dropdown-item b {
+  font-family: "Bahnschrift", sans-serif;
   font-size: 27px;
   font-weight: normal;
 }
@@ -651,12 +653,12 @@ QUARTA SESSAO
   padding: 45px 40px 35px 54px;
 }
 
-.grid-context h3 {
+.grid-context h2 {
   font-size: 27px;
   font-weight: 200;
 }
 
-.grid-context h2 {
+.grid-context h1 {
   font-size: 50px;
   font-weight: bold;
 }
@@ -936,10 +938,10 @@ footer img {
     border-bottom-right-radius: 50px;
   }
 
-  imagens-esquerda segunda .grid-context h3 {
+  .grid-context h2 {
     font-size: 20px;
   }
-  .grid-context h2 {
+  .grid-context h1 {
     font-size: 35px;
   }
 
