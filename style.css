@@ -658,7 +658,7 @@ QUARTA SESSAO
   font-weight: 200;
 }
 
-.grid-context h1 {
+.grid-context .title {
   font-size: 50px;
   font-weight: bold;
 }
