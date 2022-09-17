@@ -734,6 +734,9 @@ QUARTA SESSAO
   max-width: 576px;
   max-height: 422px;
   width: 100%;
+}
+
+.segunda-esquerda img {
   border-bottom-left-radius: 50px;
 }
 
@@ -979,11 +982,6 @@ footer img {
   }
 
   .imagens-direita .segunda {
-    border-bottom-right-radius: 0px;
-  }
-
-  .segunda-esquerda {
-    border-bottom-left-radius: 0;
     border-bottom-right-radius: 50px;
   }
 
@@ -1045,6 +1043,10 @@ footer img {
     column-gap: 15px;
   }
 
+  .imagens-direita .segunda {
+    border-bottom-right-radius: 0px;
+  }
+
   .primeira-esquerda {
     grid-area: imagem-esquerda-1;
     width: 100%;
@@ -1057,7 +1059,11 @@ footer img {
     max-width: 576px;
     max-height: 422px;
     width: 100%;
-    border-bottom-left-radius: 50px;
+  }
+
+  .segunda-esquerda img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 50px;
   }
 }
 
