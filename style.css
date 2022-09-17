@@ -316,6 +316,10 @@ PRIMEIRA SESSÃO
   position: relative;
 }
 
+.first-container .carroselPalarvas-container {
+  height: 60px;
+}
+
 .fisrt-session-container .first-container p {
   margin-top: 10px;
   font-size: 18px;
