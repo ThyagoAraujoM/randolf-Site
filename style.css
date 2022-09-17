@@ -321,10 +321,12 @@ PRIMEIRA SESSÃO
   height: 60px;
 }
 
-.fisrt-session-container .first-container p {
+.fisrt-session-container .first-container h1 {
   margin-top: 10px;
   font-size: 18px;
   max-width: 360px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: normal;
 }
 
 .fisrt-session-container .second-container {
