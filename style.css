@@ -662,6 +662,10 @@ QUARTA SESSAO
   grid-area: contexto-up;
   padding: 45px 40px 0px 54px;
 }
+
+.grid-context.upper .mobile-text {
+  display: none;
+}
 .grid-context.down {
   grid-area: contexto-down;
   padding: 0px 40px 35px 54px;
