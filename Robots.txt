@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /fonts/*
+Disallow: /assets/*
+Disallow: /README.md
+Disallow: /style.css
+Allow: /index.html
+
