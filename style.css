@@ -627,10 +627,6 @@ QUARTA SESSAO
   margin: 0 auto;
 }
 
-.container-quarta-sessao.mobile {
-  display: none;
-}
-
 .quadrado-azul {
   position: absolute;
   right: 0;
@@ -645,18 +641,30 @@ QUARTA SESSAO
 
 .container-quarta-sessao .grid {
   display: grid;
-
+  grid-column: 1fr 1fr;
   grid:
-    "contexto imagens-direita"
+    "contexto-up imagens-direita"
+    "contexto-down imagens-direita"
     "imagem-esquerda-1 imagens-direita"
     "imagem-esquerda-2 imagens-direita" / 1fr 1fr;
   row-gap: 15px;
   column-gap: 15px;
 }
 
-.grid-context {
-  grid-area: contexto;
-  padding: 45px 40px 35px 54px;
+.grid-context.upper .mobile-text {
+  display: none;
+  font-size: 16px;
+  font-family: "Bahnschrift", sans-serif;
+  color: #071e2e;
+}
+
+.grid-context.upper {
+  grid-area: contexto-up;
+  padding: 45px 40px 0px 54px;
+}
+.grid-context.down {
+  grid-area: contexto-down;
+  padding: 0px 40px 35px 54px;
 }
 
 .grid-context h2 {
@@ -678,8 +686,16 @@ QUARTA SESSAO
   gap: 25px;
   margin-top: 18px;
 }
+
+.container-quarta-sessao .mobile-images {
+  display: none;
+}
+
 .imagens-direita {
   grid-area: imagens-direita;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .imagens-direita .primeira {
@@ -697,14 +713,19 @@ QUARTA SESSAO
   border-bottom-right-radius: 50px;
 }
 
-.imagens-esquerda.primeira {
+.primeira-esquerda img,
+.segunda-esquerda img {
+  width: 100%;
+}
+
+.primeira-esquerda {
   grid-area: imagem-esquerda-1;
   width: 100%;
   max-width: 576px;
   max-height: 400px;
 }
 
-.imagens-esquerda.segunda {
+.segunda-esquerda {
   grid-area: imagem-esquerda-2;
   max-width: 576px;
   max-height: 422px;
@@ -934,19 +955,31 @@ footer img {
     height: 234px;
   }
 
+  .container-center.grid-fotos {
+    max-width: 1920px;
+    width: 100%;
+    margin-top: 150px;
+    padding: 180px 20px 100px 20px;
+    position: relative;
+  }
+
   .container-quarta-sessao .grid {
     display: grid;
     grid:
-      "contexto imagens-direita"
-      "imagem-esquerda-2 imagens-direita"
-      "imagem-esquerda-2 imagem-esquerda-1" / 1fr 1fr;
+      "contexto-up imagens-direita" 200px
+      "contexto-down imagens-direita"
+      "imagem-esquerda-1 imagens-direita"
+      "imagem-esquerda-2 imagens-direita" / 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
   }
 
   .imagens-direita .segunda {
     border-bottom-right-radius: 0px;
   }
 
-  .imagens-esquerda.primeira {
+  .segunda-esquerda {
+    border-bottom-left-radius: 0;
     border-bottom-right-radius: 50px;
   }
 
@@ -955,14 +988,6 @@ footer img {
   }
   .grid-context h1 {
     font-size: 35px;
-  }
-
-  .container-center.grid-fotos {
-    max-width: 1920px;
-    width: 100%;
-    margin-top: 150px;
-    padding: 180px 20px 100px 20px;
-    position: relative;
   }
 
   .container-sexta-sessao {
@@ -1002,6 +1027,33 @@ footer img {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+  }
+}
+
+@media (max-width: 870px) {
+  .container-quarta-sessao .grid {
+    display: grid;
+    grid:
+      "contexto-up imagens-direita"
+      "contexto-down imagens-direita"
+      "imagem-esquerda-1 imagem-esquerda-2" / 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+  }
+
+  .primeira-esquerda {
+    grid-area: imagem-esquerda-1;
+    width: 100%;
+    max-width: 576px;
+    max-height: 400px;
+  }
+
+  .segunda-esquerda {
+    grid-area: imagem-esquerda-2;
+    max-width: 576px;
+    max-height: 422px;
+    width: 100%;
+    border-bottom-left-radius: 50px;
   }
 }
 
@@ -1152,104 +1204,123 @@ footer img {
   .quadrado-azul {
     display: none;
   }
-  .container-quarta-sessao {
-    display: none;
+
+  .container-center.grid-fotos {
+    max-width: 1920px;
+    width: 100%;
+    margin-top: 0px;
+    padding: 0px 0px 100px 0px;
+    position: relative;
   }
 
-  .container-quarta-sessao.mobile {
-    display: flex;
-    flex-direction: column;
+  .container-quarta-sessao .grid {
+    display: grid;
+    grid:
+      "contexto-up"
+      "primeira-mobile"
+      "segunda-mobile"
+      "terceira-mobile"
+      "quarta-mobile"
+      "contexto-down";
+
+    row-gap: 0px;
+    column-gap: 0px;
   }
 
-  .container-quarta-sessao.mobile .primeiro-texto {
-    padding: 0px 20px;
+  .grid-context.upper {
+    padding: 45px 20px 0px 24px;
   }
 
-  .container-quarta-sessao.mobile .primeiro-texto h3 {
+  .grid-context.upper .mobile-text {
+    display: block;
+  }
+  .grid-context.upper h2 {
     font-size: 20px;
     font-weight: lighter;
   }
-  .container-quarta-sessao.mobile .primeiro-texto h2 {
+
+  .grid-context.upper .title {
     font-size: 32px;
   }
 
-  .container-quarta-sessao.mobile .primeiro-texto p {
-    font-weight: 400;
-    font-size: 16px;
+  .grid-context.upper .mobile-text {
+    display: block;
+    font-size: 20px;
   }
 
-  .container-quarta-sessao.mobile .fotos-container {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
+  .imagens-direita {
+    display: none;
   }
 
-  .container-quarta-sessao.mobile .fotos-container img {
-    height: 250px;
+  .container-quarta-sessao .mobile-images {
+    display: block;
+  }
+
+  .primeira-mobile img,
+  .segunda-mobile img,
+  .terceira-mobile img {
+    max-height: 300px;
+    width: auto;
     object-fit: contain;
   }
 
-  .container-quarta-sessao.mobile .fotos-container .primeira {
-    align-self: flex-end;
+  .primeira-mobile {
+    margin-top: 15px;
+    grid-area: primeira-mobile;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .primeira-mobile img {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
   }
-  .container-quarta-sessao.mobile .fotos-container .segunda {
-    align-self: flex-start;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+
+  .segunda-mobile {
+    grid-area: segunda-mobile;
+    display: flex;
+    justify-content: flex-start;
     margin-top: -50px;
   }
-  .container-quarta-sessao.mobile .fotos-container .terceira {
-    align-self: flex-end;
+
+  .segunda-mobile img {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    object-fit: contain;
+  }
+
+  .terceira-mobile {
+    max-width: 100%;
+    margin-top: -50px;
+    grid-area: terceira-mobile;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .terceira-mobile img {
+    grid-area: terceira-mobile;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     margin-top: -50px;
   }
 
-  .container-quarta-sessao.mobile .segundo-texto-container .primeira-imagem {
-    object-fit: cover;
+  .quarta-mobile {
+    grid-area: quarta-mobile;
+    margin-top: 25px;
+  }
+
+  .quarta-mobile img {
     width: 100%;
+    object-fit: cover;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     max-height: 700px;
   }
 
-  .container-quarta-sessao.mobile .segundo-texto-container div {
+  .grid-context.down {
     padding: 25px 20px;
   }
-  /*
-.container-quarta-sessao .grid {
-  display: grid;
-  padding: 0;
-  grid:
-    "imagens-direita"
-    "contexto";
-}
-.grid-context {
-  grid-area: contexto;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px 20px 20px 20px;
-}
-
-.imagens-direita {
-  align-items: center;
-}
-
-.imagens-direita .primeira {
-  border-top-right-radius: 0px;
-  border-top-left-radius: 50px;
-}
-.imagens-direita .segunda {
-  display: none;
-}
-.imagens-esquerda.primeira {
-  display: none;
-}
-.imagens-esquerda.segunda {
-  display: none;
-} */
 }
 /* 5 sessão */
 @media (max-width: 800px) {
@@ -1366,8 +1437,14 @@ footer img {
     font-size: 25px;
   }
 
-  .container-quarta-sessao.mobile .segundo-texto-container .primeira-imagem {
+  .quarta-mobile img {
     max-height: 600px;
+  }
+  .primeira-mobile img,
+  .segunda-mobile img,
+  .terceira-mobile img {
+    height: 220px;
+    object-fit: contain;
   }
   footer .footer-container {
     display: flex;
@@ -1393,8 +1470,10 @@ footer img {
   header {
     margin-right: 70px;
   }
-  .container-quarta-sessao.mobile .fotos-container img {
-    height: 220px;
+  .primeira-mobile img,
+  .segunda-mobile img,
+  .terceira-mobile img {
+    height: 200px;
     object-fit: contain;
   }
 }
@@ -1408,29 +1487,15 @@ footer img {
     height: 180px;
     object-fit: contain;
   }
-
-  .container-quarta-sessao.mobile .fotos-container .primeira {
+  .primeira-mobile img,
+  .segunda-mobile img,
+  .terceira-mobile img {
+    height: 200px;
     object-fit: cover;
     max-width: calc(100% - 100px);
   }
-  .container-quarta-sessao.mobile .fotos-container .segunda {
-    align-self: flex-start;
-    object-fit: cover;
-    max-width: calc(100% - 100px);
 
-    margin-top: -50px;
-  }
-  .container-quarta-sessao.mobile .fotos-container .terceira {
-    max-width: calc(100% - 100px);
-    object-fit: cover;
-    margin-top: -50px;
-  }
-
-  .container-quarta-sessao.mobile .segundo-texto-container .primeira-imagem {
-    object-fit: cover;
-    width: 100%;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+  .quarta-mobile img {
     max-height: 500px;
   }
 }
