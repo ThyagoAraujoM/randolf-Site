@@ -341,9 +341,15 @@ PRIMEIRA SESSÃO
   background-color: white;
 }
 
+.fisrt-session-container .second-container .title,
 .fisrt-session-container .second-container h1 {
+  font-family: "Bahnschrift", sans-serif;
   font-size: 34px;
   font-weight: normal;
+}
+
+.fisrt-session-container .second-container h1 {
+  font-weight: bold;
 }
 
 .carrosel-palavras {
@@ -1047,9 +1053,9 @@ footer img {
     border-radius: 0 65px 0 0;
   }
 
+  .fisrt-session-container .second-container .title,
   .fisrt-session-container .second-container h1 {
     font-size: 26px;
-    font-weight: normal;
     margin-bottom: 10px;
   }
 }
