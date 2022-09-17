@@ -322,7 +322,7 @@ PRIMEIRA SESSÃO
   height: 60px;
 }
 
-.fisrt-session-container .first-container h1 {
+.fisrt-session-container .first-container h2 {
   margin-top: 10px;
   font-size: 18px;
   max-width: 360px;
@@ -341,7 +341,7 @@ PRIMEIRA SESSÃO
   background-color: white;
 }
 
-.fisrt-session-container .second-container h3 {
+.fisrt-session-container .second-container h1 {
   font-size: 34px;
   font-weight: normal;
 }
@@ -904,7 +904,7 @@ footer img {
 }
 
 @media (max-width: 1000px) {
-  .fisrt-session-container .first-container h2,
+  .fisrt-session-container .first-container p,
   .fisrt-session-container .first-container span {
     font-size: 40px;
     font-family: "Noto Sans", sans-serif;
@@ -1047,9 +1047,9 @@ footer img {
     border-radius: 0 65px 0 0;
   }
 
-  .fisrt-session-container .second-container h3 {
+  .fisrt-session-container .second-container h1 {
     font-size: 26px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 10px;
   }
 }
@@ -1348,7 +1348,7 @@ footer img {
     font-size: 30px;
     font-family: "Noto Sans", sans-serif;
   }
-  .fisrt-session-container .first-container h1 {
+  .fisrt-session-container .first-container h2 {
     margin-top: 10px;
     font-size: 16px;
     max-width: 360px;
