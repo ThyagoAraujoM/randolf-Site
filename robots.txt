@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /fonts/*
+Disallow: /README.md
+
+Sitemap: https://www.example.com/sitemap.xml
