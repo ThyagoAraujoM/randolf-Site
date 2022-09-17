@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /fonts/*
 Disallow: /README.md
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://thyagoaraujom.github.io/randolf-Site/index.html
