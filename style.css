@@ -759,8 +759,8 @@ Quinta sessão
   z-index: -1;
   width: 50%;
   height: 100%;
-  left: 0;
   top: 0;
+  left: 0;
   object-fit: cover;
 }
 
@@ -1290,7 +1290,7 @@ footer img {
     grid-area: segunda-mobile;
     display: flex;
     justify-content: flex-start;
-    margin-top: -50px;
+    margin-top: -30px;
   }
 
   .segunda-mobile img {
@@ -1302,17 +1302,17 @@ footer img {
 
   .terceira-mobile {
     max-width: 100%;
-    margin-top: -50px;
+    margin-top: 0px;
     grid-area: terceira-mobile;
     display: flex;
     justify-content: flex-end;
+    margin-top: -50px;
   }
 
   .terceira-mobile img {
     grid-area: terceira-mobile;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-    margin-top: -50px;
   }
 
   .quarta-mobile {
@@ -1341,6 +1341,7 @@ footer img {
   .background-depoimentos {
     width: 100%;
     object-fit: cover;
+    left: 0px;
   }
   .depoimentos-mobile {
     display: block;
